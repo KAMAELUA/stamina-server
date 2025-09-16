@@ -159,6 +159,9 @@ curl -sX POST http://localhost:3000/v1/sessions/start/PLAYER_ID | jq
 curl -sX POST http://localhost:3000/v1/sessions/end/PLAYER_ID \
   -H "content-type: application/json" \
   -d '{"sessionId":"SESSION_ID","outcome":"lose","idempotencyKey":"generated-key"}' | jq
+  
+# Отримання відкритої сессії
+curl -sX http://localhost:3000/v1/sessions/open/PLAYER_ID | jq
 ```
 
 ## Мінімізація трафіку та відновлення клієнта
