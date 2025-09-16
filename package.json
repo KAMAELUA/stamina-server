@@ -5,7 +5,9 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
-    "start": "node --loader ts-node/esm --no-warnings main.ts"
+    "build:render": "npm install && npm run build",
+    "start": "node --loader ts-node/esm --no-warnings main.ts",
+    "start:dist": "node dist/main.js"
   },
   "dependencies": {
     "dotenv": "^17.2.2",

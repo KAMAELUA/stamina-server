@@ -1,0 +1,12 @@
+previews:
+  generation: automatic # Enable preview environments
+
+services:
+  - type: web
+    name: stamina-server
+    env: node
+    buildCommand: "npm run build:render"
+    startCommand: "npm run start:dist"
+    envVars:
+      - key: PORT
+        value: 80
